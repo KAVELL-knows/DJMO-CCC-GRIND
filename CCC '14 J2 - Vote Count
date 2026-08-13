@@ -1,0 +1,19 @@
+#CCC '14 J2 - Vote Count
+
+V = int(input())
+votes = input().upper()
+
+countA = 0
+countB = 0
+
+for char in votes:
+    if char == 'A':
+        countA = countA + 1
+    elif char == 'B':
+        countB = countB + 1
+if countA > countB:
+    print("A")
+elif countA < countB:
+    print("B")
+else: 
+    print("Tie")
