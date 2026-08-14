@@ -1,0 +1,18 @@
+#CCC '14 J3 - Double Dice
+
+rounds = int(input())
+lostA = 0
+lostD = 0 
+for i in range(rounds):
+    a, d = map(int, input().split())
+    if a > d:
+        lostD = lostD + a
+    elif a < d:
+        lostA = lostA + d
+    else: 
+        lostD = lostD + 0 
+        lostA = lostA + 0
+pointsA = 100 - lostA
+pointsD = 100 - lostD
+print(pointsA) #Antonia's points
+print(pointsD) #David's points
