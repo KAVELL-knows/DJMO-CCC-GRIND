@@ -1,0 +1,9 @@
+#CCC '13 J2 - Rotating letters
+
+w = input().upper()
+p = set(str(w))
+z = {'I', 'O', 'S', 'H', 'Z', 'X', 'N'}
+if p.issubset(z):
+    print("YES")
+else:
+    print("NO")
