@@ -1,0 +1,7 @@
+#CCC '13 J1 - Next in line
+
+y = int(input())
+m = int(input())
+
+o = m + (m - y)
+print(o)
