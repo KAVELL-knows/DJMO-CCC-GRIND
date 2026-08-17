@@ -1,0 +1,14 @@
+l = int(input())
+c = int(input())
+f = 0
+if c <= l:
+    print("Congratulations, you are within the speed limit!")
+else:
+    over = c - l
+    if over >= 1 and over <= 20:
+        f = 100
+    elif over >= 21 and over <= 30:
+        f = 270
+    elif over >= 31:
+        f = 500
+    print(f"You are speeding and your fine is ${f}.")
