@@ -1,0 +1,26 @@
+n = int(input())
+names1 = input().split()
+names2 = input().split()
+
+people = {}
+consistent = True
+
+for i in range(n):
+    x = names1[i]
+    y = names2[i]
+
+    if x == y:
+        consistent = False
+
+    people[x] = y
+
+if consistent:
+    for x in names1:
+        if people[people[x]] != x:
+            consistent = False
+            break
+
+if consistent:
+    print("good")
+else:
+    print("bad")
