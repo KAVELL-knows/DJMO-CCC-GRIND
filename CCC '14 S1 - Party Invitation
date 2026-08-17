@@ -1,0 +1,17 @@
+#CCC '14 S1 - Party Invitation
+
+k = int(input()) #starting number of people coming to the party 
+m = int(input()) #no of rounds of removal 
+people = list(range(1, k + 1))  #creates a string
+for i in range(m):
+    rounds = int(input())
+
+    people_left = []
+    for i in range(len(people)): #counts the string
+        if (i + 1) % rounds != 0:
+            people_left.append(people[i]) #append adds the person back into the listif they pass
+    
+    people = people_left
+    
+for d in people:
+    print(d)
