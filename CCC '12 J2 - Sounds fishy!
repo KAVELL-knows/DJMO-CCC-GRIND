@@ -1,0 +1,12 @@
+w = int(input())
+x = int(input())
+y = int(input())
+z = int(input())
+if w == x == y == z:
+    print("Fish At Constant Depth")
+elif w > x > y > z:
+    print("Fish Diving")
+elif w < x < y < z:
+    print("Fish Rising")
+else:
+    print("No Fish")
