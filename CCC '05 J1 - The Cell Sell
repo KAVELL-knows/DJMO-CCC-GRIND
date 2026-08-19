@@ -1,0 +1,27 @@
+#CCC '05 J1 - The Cell Sell
+
+daytime = int(input())
+evening = int(input())
+weekend = int(input())
+b = evening * 0.15
+c = weekend * 0.20
+if daytime > 100:
+    a = (daytime - 100) * 0.25
+else:
+    a = 0
+PlanA = a + b+ c
+e = evening * 0.35
+f = weekend * 0.25
+if daytime > 250:
+    d = (daytime - 250) * 0.45
+else:
+    d = 0
+PlanB = d + e + f
+print(f"Plan A costs {PlanA:.2f}")
+print(f"Plan B costs {PlanB:.2f}")
+if PlanA > PlanB:
+    print("Plan B is cheapest.")
+elif PlanA < PlanB:
+    print("Plan A is cheapest.")
+else:
+    print("Plan A and B are the same price.")
