@@ -1,0 +1,17 @@
+#CCC '13 J4 - Time on task
+t = int(input()) # total no of minutes
+c = int(input()) # no of chores you are doing
+nums = []
+count = 0
+num_value  = 0 
+for i  in range(c):
+    x = int(input())
+    nums.append(x)
+nums.sort()
+for i in nums:
+    if num_value + i <= t:
+        num_value = num_value + i 
+        count = count + 1
+    else:
+        break 
+print(count)
