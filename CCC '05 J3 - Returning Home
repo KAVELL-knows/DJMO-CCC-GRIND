@@ -1,0 +1,22 @@
+#CCC '05 J3 - Returning Home
+Locations = []
+Left_or_Right = []
+while True:
+    x = input()
+    Left_or_Right.append(x)
+    y = input()
+    Locations.append(y)
+    if y == "SCHOOL":
+        break
+Locations.reverse()
+Left_or_Right.reverse()
+for i in range(len(Left_or_Right)):
+    if Left_or_Right[i] == "R":
+        new_L = "LEFT"
+    else:
+        new_L = "RIGHT"
+    if i == len(Left_or_Right) - 1:
+        print(f"Turn {new_L} into your HOME.")
+    else:
+        # Use the corresponding street name
+        print(f"Turn {new_L} onto {Locations[i+1]} street.")
