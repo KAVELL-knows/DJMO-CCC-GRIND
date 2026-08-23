@@ -1,0 +1,44 @@
+
+b =  int(input())
+s = int(input())
+dr = int(input())
+de = int(input())
+total_cal = 0
+
+if b == 1:
+    total_cal = total_cal + 461
+elif b == 2:
+    total_cal = total_cal + 431
+elif b == 3: 
+    total_cal = total_cal + 420
+else:
+    total_cal = total_cal + 0
+
+if s == 1:
+    total_cal = total_cal + 100
+elif s == 2:
+    total_cal = total_cal + 57
+elif s == 3: 
+    total_cal = total_cal + 70
+else:
+    total_cal = total_cal + 0
+
+if dr == 1:
+    total_cal = total_cal + 130
+elif dr == 2:
+    total_cal = total_cal + 160
+elif dr == 3: 
+    total_cal = total_cal + 118
+else:
+    total_cal = total_cal + 0
+
+if de == 1:
+    total_cal = total_cal + 167
+elif de == 2:
+    total_cal = total_cal + 266
+elif de == 3: 
+    total_cal = total_cal + 75
+else:
+    total_cal = total_cal + 0
+
+print(f"Your total Calorie count is {total_cal}.")
