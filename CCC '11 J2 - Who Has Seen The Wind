@@ -1,0 +1,14 @@
+#CCC '11 J2 - Who Has Seen The Wind
+
+h = int(input())
+m = int(input())
+time = []
+for i in range(m+1):
+    if -6*i**4 + h*i**3 +2*i**2 + i <= 0:
+        time.append(i)
+if len(time) > 1:
+    print("The balloon first touches ground at hour:")
+    print(f"{time[1]}")
+else:
+    print("The balloon does not touch ground in the given time.")
+
