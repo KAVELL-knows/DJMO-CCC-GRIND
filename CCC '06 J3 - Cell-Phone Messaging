@@ -1,0 +1,64 @@
+#CCC '06 J3 - Cell-Phone Messaging
+while True:
+    word = input()
+    if word == "halt":
+        break
+    total_time = 0
+    prev_key = "" 
+    for letter in word:
+        current_key = ""
+        presses = 0
+        if letter in "abc":
+            current_key = "2"
+            if letter == "a": presses = 1
+            if letter == "b": presses = 2
+            if letter == "c": presses = 3
+            
+        elif letter in "def":
+            current_key = "3"
+            if letter == "d": presses = 1
+            if letter == "e": presses = 2
+            if letter == "f": presses = 3
+            
+        elif letter in "ghi":
+            current_key = "4"
+            if letter == "g": presses = 1
+            if letter == "h": presses = 2
+            if letter == "i": presses = 3
+            
+        elif letter in "jkl":
+            current_key = "5"
+            if letter == "j": presses = 1
+            if letter == "k": presses = 2
+            if letter == "l": presses = 3
+            
+        elif letter in "mno":
+            current_key = "6"
+            if letter == "m": presses = 1
+            if letter == "n": presses = 2
+            if letter == "o": presses = 3
+            
+        elif letter in "pqrs":
+            current_key = "7"
+            if letter == "p": presses = 1
+            if letter == "q": presses = 2
+            if letter == "r": presses = 3
+            if letter == "s": presses = 4
+            
+        elif letter in "tuv":
+            current_key = "8"
+            if letter == "t": presses = 1
+            if letter == "u": presses = 2
+            if letter == "v": presses = 3
+            
+        elif letter in "wxyz":
+            current_key = "9"
+            if letter == "w": presses = 1
+            if letter == "x": presses = 2
+            if letter == "y": presses = 3
+            if letter == "z": presses = 4
+        total_time = total_time + presses
+        if current_key == prev_key:
+            total_time = total_time + 2
+        prev_key = current_key
+    print(total_time)
