@@ -1,0 +1,9 @@
+x = int(input())
+y = int(input())
+count = 2  
+while x >= y:  
+    z = x - y
+    x = y
+    y = z
+    count += 1
+print(count)
