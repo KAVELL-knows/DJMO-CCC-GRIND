@@ -1,0 +1,6 @@
+#CCC '04 J1 - Squares
+
+x = int(input())
+y = x**0.5
+y = int(y // 1)
+print(f"The largest square has side length {y}.")
