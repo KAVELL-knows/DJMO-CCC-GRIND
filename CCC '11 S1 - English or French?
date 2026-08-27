@@ -1,0 +1,15 @@
+#CCC '11 S1 - English or French?
+n = int(input())
+countS = 0
+countT = 0
+for i in range(n):
+    p = input().lower()
+    for char in p:
+        if char == 's':
+            countS += 1
+        elif char == 't':
+            countT += 1
+if countS >= countT:
+    print("French")
+else:
+    print("English")
