@@ -1,0 +1,8 @@
+#CCC '04 J2 - Terms of Office
+
+x = int(input())
+y = int(input())
+for i in range(y - x + 1):
+    m = i + x
+    if i % 4 == 0 and i % 2 == 0  and i % 3  == 0 and i % 5 == 0:
+        print(f"All positions change in year {m}") 
