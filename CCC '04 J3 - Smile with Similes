@@ -1,0 +1,15 @@
+#CCC '04 J3 - Smile with Similes
+
+n = int(input())
+m = int(input())
+adj = []
+noun = []
+for i in range(n):
+    x = input().capitalize()
+    adj.append(x)
+for i in range(m):
+    y = input().lower()
+    noun.append(y)
+for i in adj:
+    for j in noun:
+        print(f"{i} as {j}") 
