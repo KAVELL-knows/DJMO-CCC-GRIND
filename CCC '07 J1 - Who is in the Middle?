@@ -1,0 +1,7 @@
+#CCC '07 J1 - Who is in the Middle?
+bowl = []
+for i in range(3):
+    x = int(input())
+    bowl.append(x)
+bowl.sort()
+print(bowl[1])
