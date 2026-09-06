@@ -1,0 +1,30 @@
+#CCC '10 J2 - Up and Down
+a = int(input())
+b = int(input())
+c = int(input())
+d = int(input())
+s = int(input())
+progressN = 0
+progressB = 0 
+Nikky = 0
+Byron = 0 
+h = s // ( a + b )
+i = s % (a + b)
+if i > a:
+    x = (i - a) * -1
+else: 
+    x = i
+progressN = ( h * (a-b)) + x
+k = s // ( c + d )
+i = s % (c + d)
+if i > a:
+    x = (i - c) * -1
+else: 
+    x = i
+progressB = ( k * (c-d)) + x
+if progressN > progressB:
+    print("Nikky")
+elif progressN < progressB:
+    print("Byron")
+else:
+    print("Tied")
