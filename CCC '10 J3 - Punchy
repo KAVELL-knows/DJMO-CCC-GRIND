@@ -1,0 +1,33 @@
+#CCC '10 J3 - Punchy
+vars = {'A': 0, 'B': 0}
+while True:
+    z = input().strip()
+    if not z:
+        continue
+    parts = z.split()
+    y = parts[0]
+    if y == '7':
+        break
+    elif y == '1':
+        x = parts[1]
+        n = int(parts[2])
+        vars[x] = n
+    elif y == '2':
+        x = parts[1]
+        print(vars[x])
+    elif y == '3':
+        x = parts[1]
+        y = parts[2]
+        vars[x] = vars[x] + vars[y]
+    elif y == '4':
+        x = parts[1]
+        y = parts[2]
+        vars[x] = vars[x] * vars[y]
+    elif y == '5':
+        x = parts[1]
+        y = parts[2]
+        vars[x] = vars[x] - vars[y]
+    elif y == '6':
+        x = parts[1]
+        y = parts[2]
+        vars[x] = vars[x] // vars[y]
