@@ -1,0 +1,23 @@
+while True:
+    nums = list(map(int, input().split()))
+    if nums[0] == 0:
+        break  
+    n = nums[0]
+    temperatures = nums[1:]
+    if n == 1:
+        print(0)
+        continue
+    pie = []
+    for i in range(len(temperatures) - 1):
+        count = temperatures[i+1] - temperatures[i]
+        pie.append(count)
+    num_diffs = len(pie)
+    for L in range(1, num_diffs + 1):
+        is_valid = True
+        for i in range(num_diffs):
+            if pie[i] != pie[i % L]:
+                is_valid = False
+                break
+        if is_valid:
+            print(L)
+            break 
