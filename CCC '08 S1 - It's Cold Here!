@@ -1,0 +1,20 @@
+#CCC '08 S1 - It's Cold Here!
+import sys
+def main():
+    coldest_city = ""
+    lowest_temp = float('inf')
+    for line in sys.stdin:
+        line = line.strip()
+        if not line:
+            continue
+        city, temp_str = line.split()
+        temp = int(temp_str)
+        if temp < lowest_temp:
+            lowest_temp = temp
+            coldest_city = city
+        if city == "Waterloo":
+            break
+    print(coldest_city)
+    
+if __name__ == "__main__":
+    main()
