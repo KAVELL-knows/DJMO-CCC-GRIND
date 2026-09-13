@@ -1,0 +1,33 @@
+#CCC '05 S1 - Snow Calls
+t = int(input())
+for i in range(t):
+    nums = []
+    x = list(input()) 
+    for j in x: 
+        if j == "-":
+            continue
+        if len(nums) == 10:
+            break
+        if j.isdigit():
+            nums.append(j)
+        elif j in ("A", "B", "C"):
+            nums.append("2")
+        elif j in ("D", "E", "F"):
+            nums.append("3")
+        elif j in ("G", "H", "I"):
+            nums.append("4") 
+        elif j in ("J", "K", "L"):
+            nums.append("5")
+        elif j in ("M", "N", "O"):
+            nums.append("6")
+        elif j in ("P", "Q", "R", "S"):
+            nums.append("7")
+        elif j in ("T", "U", "V"):  
+            nums.append("8")
+        elif j in ("W", "X", "Y", "Z"):
+            nums.append("9")
+    first = "".join(nums[0:3])
+    second = "".join(nums[3:6])
+    third = "".join(nums[6:10])
+    print(f"{first}-{second}-{third}")
+
