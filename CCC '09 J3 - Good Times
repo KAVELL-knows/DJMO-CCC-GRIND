@@ -1,0 +1,26 @@
+# CCC '09 J3 - Good Times
+n = int(input())
+print(f"{n} in Ottawa")
+vic = n - 300
+if vic < 0:
+    vic = vic + 2400 
+print(f"{vic} in Victoria")
+edm = n - 200
+if edm < 0:
+    edm = edm + 2400
+print(f"{edm} in Edmonton")
+win = n - 100
+if win < 0:
+    win = win + 2400
+print(f"{win} in Winnipeg")
+print(f"{n} in Toronto")
+haf = n + 100
+if haf > 2400:
+    haf = haf - 2400
+print(f"{haf} in Halifax")
+jon = n + 130
+if (jon % 100) >= 60:
+    jon = jon + 40
+if jon >= 2400:
+    jon = jon - 2400
+print(f"{jon} in St. John's")
