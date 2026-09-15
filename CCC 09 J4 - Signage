@@ -1,0 +1,33 @@
+# CCC 09 J4 - Signage
+w = int(input())
+words = ["WELCOME", "TO", "CCC", "GOOD", "LUCK", "TODAY"]
+i = 0
+while i < len(words):
+    line_words = [words[i]]
+    current_len = len(words[i])
+    i += 1
+    while i < len(words) and current_len + 1 + len(words[i]) <= w:
+        line_words.append(words[i])
+        current_len += 1 + len(words[i])
+        i += 1
+        
+    num_words = len(line_words)
+    if num_words == 1:
+        line = line_words[0] + "." * (w - len(line_words[0]))
+    else:
+        total_letters = 0
+        for word in line_words:
+            total_letters += len(word)
+    
+        total_dots = w - total_letters
+        gaps = num_words - 1
+        base_dots = total_dots // gaps
+        extra_dots = total_dots % gaps
+        line = ""
+        for j in range(gaps):
+            if j < extra_dots:
+                line += line_words[j] + "." * (base_dots + 1)
+            else:
+                line += line_words[j] + "." * base_dots
+        line += line_words[-1]
+    print(line)
