@@ -1,0 +1,18 @@
+#CCC '07 S1 - Federal Voting Age
+n = int(input())
+for i in range(n):
+    x, y , z = list(map(int, input().split()))
+    if 2007 - x > 18:
+        print("Yes")
+    elif 2007 - x < 18:
+        print("No")
+    else:
+        if y < 2:
+            print("Yes")
+        elif y > 2:
+            print("No")
+        else:
+            if z <= 27:
+                print("Yes")
+            else:
+                print("No")
