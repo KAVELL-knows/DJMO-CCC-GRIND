@@ -1,0 +1,20 @@
+# CCC '12 S2 - Aromatic Numbers
+s = input()
+roman_values = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+pairs = []
+for i in range(0, len(s), 2):
+    arabic = int(s[i])
+    roman_char = s[i+1]
+    roman_val = roman_values[roman_char]
+    pairs.append((arabic, roman_val))
+total_value = 0
+
+for i in range(len(pairs)):
+    arabic, roman_val = pairs[i]
+    pair_value = arabic * roman_val
+
+    if i < len(pairs) - 1 and pairs[i+1][1] > roman_val:
+        total_value -= pair_value  
+    else:
+        total_value += pair_value 
+print(total_value)
