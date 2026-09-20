@@ -1,0 +1,29 @@
+#CCC '05 S2 - Mouse Move
+c, r = list(map(int, input().split()))
+x, y = list(map(int, input().split()))
+if x > c: x = c
+if x < 0: x = 0
+if y > r: y = r
+if y < 0: y = 0
+horizontal = x
+vertical = y 
+while True:
+    if x == 0 and y == 0:
+        break 
+    else:
+        print(f"{horizontal} {vertical}")
+        x, y = list(map(int, input().split()))
+        horizontal += x
+        vertical += y 
+        if horizontal > c:
+            horizontal = c
+        elif horizontal < 0:
+            horizontal = 0 
+        else:
+            horizontal = horizontal
+        if vertical > r:
+            vertical = r
+        elif  vertical < 0:
+            vertical = 0 
+        else:
+            vertical = vertical
