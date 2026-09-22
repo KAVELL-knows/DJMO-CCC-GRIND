@@ -1,0 +1,25 @@
+#CCC '12 S3 - Absolutely Acidic
+from collections import Counter
+n = int(input())
+list_readings = [] 
+for i in range(n):
+    x = int(input())
+    list_readings.append(x)
+count = Counter(list_readings)
+
+freqs = count.most_common()
+if freqs[0][1] == freqs[1][1]:
+    highest_freq = freqs[0][1]
+    tied_leaders = [item[0] for item in freqs if item[1] == highest_freq]
+    print(max(tied_leaders) - min(tied_leaders))
+elif len(freqs) > 2 and freqs[1][1] == freqs[2][1]:
+    most_frequent = freqs[0][0] 
+    second_highest_freq = freqs[1][1]
+    tied_seconds = [item[0] for item in freqs if item[1] == second_highest_freq]
+    diff1 = abs(most_frequent - max(tied_seconds))
+    diff2 = abs(most_frequent - min(tied_seconds))
+    print(max(diff1, diff2))
+else:
+    most_frequent = freqs[0][0]
+    second_frequent = freqs[1][0]
+    print(abs(most_frequent - second_frequent))
