@@ -1,0 +1,12 @@
+#CCC '08 S2 - Pennies in the Ring
+
+import math
+while True:
+    r = int(input())
+    if r == 0:
+        break
+    total_pennies = 2 * r + 1
+    for x in range(1, r + 1):
+        y_max = int(math.sqrt(r * r - x * x))
+        total_pennies += 2 * (2 * y_max + 1)
+    print(total_pennies)
