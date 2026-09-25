@@ -1,0 +1,11 @@
+#CCC '98 S1 - Censor
+n = int(input())
+for i in range(n):
+    words = input().split()
+    censored_words = []
+    for j in words:
+        if len(j) == 4:
+            censored_words.append("****")
+        else:
+            censored_words.append(j)
+    print(" ".join(censored_words))
