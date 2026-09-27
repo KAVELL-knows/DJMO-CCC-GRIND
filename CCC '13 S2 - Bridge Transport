@@ -1,0 +1,37 @@
+#CCC '13 S2 - Bridge Transport
+w = int(input())
+n = int(input())
+weight = 0 
+count = 0 
+
+first = 0
+second = 0
+third = 0 
+fourth = 0 
+
+for i in range(1, n+1):
+    x = int(input())
+    weight = weight + x
+    if i > 4:
+        if i % 4 == 1:
+            weight = weight - first 
+        elif i % 4 == 2:
+            weight = weight - second
+        elif i % 4 == 3:
+            weight = weight - third
+        elif i % 4 == 0:  
+            weight = weight - fourth 
+
+    if i % 4 == 1:
+        first = x
+    elif i % 4 == 2:
+        second = x
+    elif i % 4 == 3:
+        third = x
+    elif i % 4 == 0:  
+        fourth = x
+    if weight > w:
+        break
+    else:
+        count += 1
+print(count)
