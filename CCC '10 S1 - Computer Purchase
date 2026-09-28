@@ -1,0 +1,26 @@
+#CCC '10 S1 - Computer Purchase
+n = int(input())
+firstx = -1 
+secondx = -1 
+firsta = "" 
+seconda = "" 
+
+for i in range(n):
+    a, b , c, d = list(input().split())
+    b = int(b)
+    c = int(c)
+    d = int(d)
+    x = (2*b + 3*c + d)
+    
+    if x > firstx or (x == firstx and a < firsta):
+        seconda = firsta
+        secondx = firstx
+        firsta = a
+        firstx = x
+    elif x > secondx or (x == secondx and a < seconda):
+        seconda = a
+        secondx = x
+if n >= 1:
+    print(firsta)
+if n >= 2:
+    print(seconda)
