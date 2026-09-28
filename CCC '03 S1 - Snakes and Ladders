@@ -1,0 +1,28 @@
+#CCC '03 S1 - Snakes and Ladders
+count = 1
+while True:
+    x = int(input())
+    if x == 0:
+        print("You Quit!")
+        break
+    else:
+        if count + x > 100:
+            count += 0
+        else:
+            count += x 
+        if count == 9:
+            count = 34
+        elif count == 40:
+            count = 64
+        elif count == 54:
+            count = 19
+        elif count == 67:
+            count = 86
+        elif count == 90:
+            count = 48
+        elif count == 99:
+            count = 77
+        print(f"You are now on square {count}")
+        if count == 100:
+            print("You Win!")
+            break    
