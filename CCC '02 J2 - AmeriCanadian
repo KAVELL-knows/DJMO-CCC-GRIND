@@ -1,0 +1,9 @@
+# CCC '02 J2 - AmeriCanadian
+while True:
+    x = input()
+    if x == "quit!":
+        break
+    if len(x) > 4 and x.endswith("or"):
+        if x[-3] not in "aeiouy":
+            x = x[:-2] + "our"          
+    print(x)
