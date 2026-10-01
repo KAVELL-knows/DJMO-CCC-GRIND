@@ -1,0 +1,14 @@
+#CCC '15 J1 - Special Day
+x = int(input())
+y = int(input())
+if x > 2:
+    print("After")
+elif x < 2:
+    print("Before")
+else:
+    if y > 18:
+        print("After")
+    elif y < 18:
+        print("Before")
+    else:
+        print("Special")
