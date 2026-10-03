@@ -1,0 +1,27 @@
+#CCC '02 S1 - The Students' Council Breakfast
+pink = int(input())
+green = int(input())
+red = int(input())
+orange = int(input())
+target = int(input())
+
+total_combinations = 0
+min_tickets = float('inf')
+
+for p in range((target // pink) + 1):
+    for g in range((target // green) + 1):
+        for r in range((target // red) + 1):
+            for o in range((target // orange) + 1):
+                current_cost = (p * pink) + (g * green) + (r * red) + (o * orange)
+                
+                if current_cost == target:
+                    total_combinations += 1
+                    current_tickets = p + g + r + o
+
+                    if current_tickets < min_tickets:
+                        min_tickets = current_tickets
+                    
+                    print(f"# of PINK is {p} # of GREEN is {g} # of RED is {r} # of ORANGE is {o}")
+                    
+print(f"Total combinations is {total_combinations}.")
+print(f"Minimum number of tickets to print is {min_tickets}.")
