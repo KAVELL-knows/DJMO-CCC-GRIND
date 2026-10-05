@@ -1,0 +1,58 @@
+#CCC '15 J3 - Rövarspråket
+
+s = input().lower()
+answer = []
+for char in s:
+    if char == "a":
+        answer.append("a")
+    elif char == "b":
+        answer.append("bac")
+    elif char == "c":
+        answer.append("cad")
+    elif char == "d":
+        answer.append("def")
+    elif char == "e":
+        answer.append("e")
+    elif char == "f":
+        answer.append("feg")
+    elif char == "g":
+        answer.append("geh")
+    elif char == "h":
+        answer.append("hij")
+    elif char == "i":
+        answer.append("i")
+    elif char == "j":
+        answer.append("jik")    
+    elif char == "k":
+        answer.append("kil")
+    elif char == "l":
+        answer.append("lim")
+    elif char == "m":
+        answer.append("mon")
+    elif char == "n":
+        answer.append("nop")
+    elif char == "o":
+        answer.append("o")
+    elif char == "p":
+        answer.append("poq")
+    elif char == "q":
+        answer.append("qor")
+    elif char == "r":
+        answer.append("ros")
+    elif char == "s":
+        answer.append("sut")
+    elif char == "t":
+        answer.append("tuv")
+    elif char == "u":
+        answer.append("u")        
+    elif char == "v":
+        answer.append("vuw")
+    elif char == "w":
+        answer.append("wux")
+    elif char == "x":
+        answer.append("xuy")
+    elif char == "y":
+        answer.append("yuz")
+    elif char == "z":
+        answer.append("zuz")
+print("".join(answer))
