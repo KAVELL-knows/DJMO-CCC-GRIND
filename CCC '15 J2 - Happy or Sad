@@ -1,0 +1,14 @@
+#CCC '15 J2 - Happy or Sad
+s = input()
+
+happy = s.count(":-)")
+sad = s.count(":-(")
+
+if happy == 0 and sad == 0:
+    print("none")
+elif happy > sad:
+    print("happy")
+elif sad > happy:
+    print("sad")
+else:
+    print("unsure")
