@@ -1,0 +1,11 @@
+CCC '01 J1 - Dressing Up
+
+x = int(input())
+for i in range(1, x + 2 // 2, 2):
+    stars = "*" * i
+    spaces = " " * (2 * x - 2 * i)
+    print(f"{stars}{spaces}{stars}")
+for i in range(x - 2, 0, -2):
+    stars = "*" * i
+    spaces = " " * (2 * x - 2 * i)
+    print(f"{stars}{spaces}{stars}")
