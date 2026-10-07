@@ -1,0 +1,26 @@
+n = int(input())
+boxes = []
+
+for i in range(n):
+    dims = sorted(list(map(int, input().split())))
+    vol = dims[0] * dims[1] * dims[2]
+    boxes.append((dims, vol))
+
+boxes.sort(key=lambda b: b[1])
+
+m = int(input())
+
+for i in range(m):
+    item = sorted(list(map(int, input().split())))
+    
+    fitted_box_vol = None
+    
+    for box_dims, box_vol in boxes:
+        if item[0] <= box_dims[0] and item[1] <= box_dims[1] and item[2] <= box_dims[2]:
+            fitted_box_vol = box_vol
+            break
+            
+    if fitted_box_vol is not None:
+        print(fitted_box_vol)
+    else:
+        print("Item does not fit.")
