@@ -1,0 +1,13 @@
+#CCC '15 S1 - Zero That Out
+k = int(input())
+
+val = []
+
+for i in range(k):
+    num = int(input())
+    if num == 0:
+        val.pop()  
+    else:
+        val.append(num) 
+
+print(sum(val))
