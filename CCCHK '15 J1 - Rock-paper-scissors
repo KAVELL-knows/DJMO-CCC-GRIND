@@ -1,0 +1,18 @@
+#CCCHK '15 J1 - Rock-paper-scissors
+n = int(input())
+alice_shapes = input().split()
+bob_shapes = input().split()
+alice = 0
+bob = 0
+
+for i in range(n):
+    a = alice_shapes[i]
+    b = bob_shapes[i]
+    
+    if (a == "rock" and b == "scissors") or (a == "paper" and b == "rock") or (a == "scissors" and b == "paper"):
+        alice += 1
+        
+    elif (b == "rock" and a == "scissors") or (b == "paper" and a == "rock") or (b == "scissors" and a == "paper"):
+        bob += 1
+
+print(alice, bob)
