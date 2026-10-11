@@ -1,0 +1,25 @@
+#CCC '16 S1 - Ragaman
+s = input()
+t = input()
+
+anagram = True
+unique = set(s + t)
+
+available = t.count('*')
+needed = 0
+
+for i in unique:
+    if i != '*':
+        count1 = s.count(i)
+        count2 = t.count(i)
+        
+        if count2 > count1:
+            anagram = False
+            break
+        elif count2 < count1:
+            needed += (count1 - count2)
+
+if anagram and needed == available:
+    print("A")
+else:
+    print("N")
