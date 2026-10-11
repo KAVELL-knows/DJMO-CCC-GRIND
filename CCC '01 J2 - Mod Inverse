@@ -1,0 +1,14 @@
+#CCC '01 J2 - Mod Inverse
+
+x = int(input())
+m = int(input())
+
+found = False
+for n in range(1, m):
+    if (x * n) % m == 1:
+      print(n)
+      found = True
+      break
+
+if not found:
+  print("No such integer exists.")
