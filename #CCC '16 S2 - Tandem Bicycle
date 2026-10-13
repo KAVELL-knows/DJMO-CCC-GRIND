@@ -1,0 +1,29 @@
+#CCC '16 S2 - Tandem Bicycle
+
+n = int(input())
+trials = int(input())
+
+list1 = list(map(int, input().split()))
+list2 = list(map(int, input().split()))
+
+if n == 2:
+    
+    count = 0 
+    list1.sort()
+    list2.sort(reverse = True)
+    for i in range(len(list1)):
+        y = max(list1[i], list2[i])
+        count += y
+
+    print(count)
+
+elif n == 1:
+    count = 0 
+    list1.sort()
+    list2.sort()
+
+    for i in range(len(list1)):
+        y = max(list1[i], list2[i])
+        count += y
+
+    print(count)
