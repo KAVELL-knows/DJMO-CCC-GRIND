@@ -1,0 +1,15 @@
+#CCC '16 J3 - Hidden Palindrome
+s = input().strip()
+
+max = 1
+n = len(s)
+
+for i in range(n):
+    for j in range(i + 1, n + 1):
+        sub = s[i:j]
+
+        if sub == sub[::-1]:
+            if len(sub) > max:
+                max = len(sub)
+                
+print(max)
