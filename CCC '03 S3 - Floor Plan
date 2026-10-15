@@ -1,0 +1,53 @@
+#CCC '03 S3 - Floor Plan
+n = int(input())
+rows = int(input())
+columns = int(input())
+
+grid = []
+for i in range(rows):
+    grid.append(list(input()))
+
+visited = [[False] * columns for i in range(rows)]
+room_sizes = []
+
+
+for r in range(rows):
+    for c in range(columns):
+
+        if grid[r][c] == '.' and not visited[r][c]:
+            room_size = 0
+            
+
+            stack = [(r, c)]
+            visited[r][c] = True
+            
+            while stack:
+                curr_r, curr_c = stack.pop()
+                room_size += 1
+                
+                for dr, dc in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
+                    nr, nc = curr_r + dr, curr_c + dc
+                    
+                    if 0 <= nr < rows and 0 <= nc < columns:
+                        if grid[nr][nc] == '.' and not visited[nr][nc]:
+                            visited[nr][nc] = True
+                            stack.append((nr, nc))
+            
+            room_sizes.append(room_size)
+
+room_sizes.sort(reverse=True)
+
+rooms_filled = 0
+leftover = n
+
+for size in room_sizes:
+    if leftover >= size:
+        leftover -= size
+        rooms_filled += 1
+    else:
+        break
+
+if rooms_filled == 1:
+    print(f"1 room, {leftover} square metre(s) left over")
+else:
+    print(f"{rooms_filled} rooms, {leftover} square metre(s) left over")
