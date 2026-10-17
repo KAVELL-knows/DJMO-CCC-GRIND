@@ -1,0 +1,25 @@
+t, x = map(int, input().split())
+
+print("Sun Mon Tue Wed Thr Fri Sat")
+
+thing = []
+
+for _ in range(t - 1):
+    thing.append("   ")
+    
+current_day_of_week = t
+
+for day in range(1, x + 1):
+
+    day_str = f"{day:3d}"
+    thing.append(day_str)
+    
+
+    if current_day_of_week == 7 or day == x:
+
+        print(" ".join(thing))
+
+        thing = []
+        current_day_of_week = 0
+        
+    current_day_of_week += 1
