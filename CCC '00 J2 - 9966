@@ -1,0 +1,38 @@
+# Read the lower and upper bounds of the interval
+m = int(input())
+n = int(input())
+
+count = 0
+
+# Loop through each number in the given range [m, n]
+for num in range(m, n + 1):
+    num_str = str(num)
+    is_rotatable = True
+    rotated_str = ""
+    
+    # Check each digit from right to left to simulate 180-degree rotation
+    for i in range(len(num_str) - 1, -1, -1):
+        digit = num_str[i]
+        
+        # Map each valid digit to its 180-degree flipped counterpart
+        if digit == '0':
+            rotated_str += '0'
+        elif digit == '1':
+            rotated_str += '1'
+        elif digit == '8':
+            rotated_str += '8'
+        elif digit == '6':
+            rotated_str += '9'
+        elif digit == '9':
+            rotated_str += '6'
+        else:
+            # If any digit cannot be rotated, the whole number is invalid
+            is_rotatable = False
+            break
+            
+    # The number looks identical if it is valid and matches its original self
+    if is_rotatable and rotated_str == num_str:
+        count += 1
+
+# Output the total count
+print(count)
