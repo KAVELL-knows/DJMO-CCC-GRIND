@@ -1,0 +1,29 @@
+# CCC '15 J5 - π-day
+n = int(input())
+k = int(input())
+
+if n < k:
+    print(0)
+elif n == k or k == 1:
+    print(1)
+else:
+    remaining_pies = n - k
+
+    dp = []
+    for i in range(remaining_pies + 1):
+        dp.append([0] * (k + 1))
+
+    for j in range(k + 1):
+        dp[0][j] = 1
+
+    for i in range(1, remaining_pies + 1):  
+        for j in range(1, k + 1):  
+            
+            ways_without_person = dp[i][j - 1]
+            ways_with_person = 0
+            if i >= j:
+                ways_with_person = dp[i - j][j]
+            
+            dp[i][j] = ways_without_person + ways_with_person
+
+    print(dp[remaining_pies][k])
