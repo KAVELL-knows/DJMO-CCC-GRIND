@@ -1,0 +1,18 @@
+brown_pts = int(input())
+pike_pts = int(input())
+pickerel_pts = int(input())
+limit = int(input())
+
+count = 0
+
+for b in range(limit // brown_pts + 1):
+    for p in range(limit // pike_pts + 1):
+        for pi in range(limit // pickerel_pts + 1):
+            if b == 0 and p == 0 and pi == 0:
+                continue
+            total = (b * brown_pts) + (p * pike_pts) + (pi * pickerel_pts)
+            if total <= limit:
+                print(f"{b} Brown Trout, {p} Northern Pike, {pi} Yellow Pickerel")
+                count += 1
+
+print(f"Number of ways to catch fish: {count}")
