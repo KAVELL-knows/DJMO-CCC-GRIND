@@ -1,0 +1,25 @@
+first = int(input())
+
+casp = 0
+nats = 0 
+
+for i in range(first):
+    w, h = list(map(int, input().split()))
+    prod = w * h 
+    if prod > casp:
+        casp = prod
+
+second = int(input())
+
+for i in range(second):
+    w, h = list(map(int, input().split()))
+    prod = w * h 
+    if prod > nats:
+        nats = prod
+
+if nats < casp:
+    print("Casper")
+elif casp < nats:
+    print("Natalie")
+else:
+    print("Tie")
