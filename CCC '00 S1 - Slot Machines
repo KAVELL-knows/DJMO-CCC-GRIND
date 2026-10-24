@@ -1,0 +1,33 @@
+quarters = int(input())
+machine1 = int(input())
+machine2 = int(input())
+machine3 = int(input())
+
+plays = 0
+current_machine = 1
+
+while quarters > 0:
+    quarters -= 1
+    plays += 1
+    
+    if current_machine == 1:
+        machine1 += 1
+        if machine1 == 35:
+            quarters += 30
+            machine1 = 0
+            
+    elif current_machine == 2:
+        machine2 += 1
+        if machine2 == 100:  # Fixed: changed m2 to machine2
+            quarters += 60
+            machine2 = 0
+            
+    elif current_machine == 3:
+        machine3 += 1
+        if machine3 == 10:
+            quarters += 9
+            machine3 = 0
+            
+    current_machine = (current_machine % 3) + 1
+
+print(f"Martha plays {plays} times before going broke.")
