@@ -1,0 +1,20 @@
+n = int(input())
+
+for i in range(n):
+    w1 = input()
+    w2 = input()
+    w3 = input()
+    
+    words = [w1, w2, w3]
+    possibility = True
+    
+    for i in range(3):
+        for j in range(3):
+            if i != j:
+                if words[j].startswith(words[i]) or words[j].endswith(words[i]):
+                    possibility = False
+                    
+    if possibility:
+        print("Yes")
+    else:
+        print("No")
