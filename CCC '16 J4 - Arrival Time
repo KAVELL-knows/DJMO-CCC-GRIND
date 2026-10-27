@@ -1,0 +1,26 @@
+
+departure_time = input().strip()
+hh, mm = map(int, departure_time.split(':'))
+
+current_time = hh * 60 + mm
+
+
+distance_remaining = 240
+
+while distance_remaining > 0:
+    current_hour = (current_time % 1440) // 60
+    
+    is_rush_hour = (7 <= current_hour < 10) or (15 <= current_hour < 19)
+    
+    if is_rush_hour:
+        distance_remaining -= 1 
+    else:
+        distance_remaining -= 2 
+        
+    current_time += 1
+
+arrival_time = current_time % 1440
+arrival_hh = arrival_time // 60
+arrival_mm = arrival_time % 60
+
+print(f"{arrival_hh:02d}:{arrival_mm:02d}")
