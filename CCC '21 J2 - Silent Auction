@@ -1,0 +1,16 @@
+#CCC '21 J2 - Silent Auction
+
+t = int(input())
+
+lead = 0 
+winner = []
+
+for i in range(t):
+    name = input()
+    score = int(input())
+
+    if score > lead:
+        winner.append(name)
+        lead = score
+
+print(winner[-1])
