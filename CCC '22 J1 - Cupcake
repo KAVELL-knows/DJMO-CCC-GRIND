@@ -1,0 +1,7 @@
+r = int(input())
+s = int(input())
+
+total = (r * 8) + (s * 3)
+
+remaining = total - 28
+print(remaining)
