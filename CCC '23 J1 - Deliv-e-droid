@@ -1,0 +1,9 @@
+packages = int(input())
+obstacles = int(input())
+
+total = 0 
+if packages > obstacles:
+    total = 500
+
+total += ( packages * 50 ) - (obstacles * 10)
+print(total)
