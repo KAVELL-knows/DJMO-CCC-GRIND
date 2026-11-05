@@ -1,0 +1,17 @@
+n = int(input())
+day_counts = [0] * 5
+
+for i in range(n):
+    row = input()
+    for j in range(5):
+        if row[j] == 'Y':
+            day_counts[j] += 1
+
+max_count = max(day_counts)
+
+answer = []
+for j in range(5):
+    if day_counts[j] == max_count:
+        answer.append(str(j + 1))
+
+print(",".join(answer))
