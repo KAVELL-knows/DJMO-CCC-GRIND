@@ -1,0 +1,18 @@
+x, y = list(map(int, input().split()))
+
+for i in range(x):
+    answer = []
+
+    letters = input()
+    for letter in letters:
+        if letters.count(letter) > 1:
+            answer.append("h")
+        else:
+            answer.append("l")
+
+    for j in range(len(answer) -1):
+        if answer[j] == answer[j + 1]:
+            print("F")
+            break
+    else:
+        print("T")
