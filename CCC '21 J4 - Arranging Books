@@ -1,0 +1,29 @@
+s = input()
+
+tot_L = s.count('L')
+tot_M = s.count('M')
+tot_S = s.count('S')
+
+reg_L = s[:tot_L]
+reg_M = s[tot_L : tot_L + tot_M]
+reg_S = s[tot_L + tot_M :]
+
+wrong_L_in_M = reg_L.count('M')
+wrong_L_in_S = reg_L.count('S')
+
+wrong_M_in_L = reg_M.count('L')
+wrong_M_in_S = reg_M.count('S')
+
+wrong_S_in_L = reg_S.count('L')
+wrong_S_in_M = reg_S.count('M')
+
+swap_LM = min(wrong_L_in_M, wrong_M_in_L)
+swap_LS = min(wrong_L_in_S, wrong_S_in_L)
+swap_MS = min(wrong_M_in_S, wrong_S_in_M)
+
+direct_swaps = swap_LM + swap_LS + swap_MS
+
+rem_wrong = ((wrong_L_in_M - swap_LM) + (wrong_L_in_S - swap_LS) + (wrong_M_in_S - swap_MS))
+
+total_swaps = direct_swaps + (rem_wrong // 3) * 2
+print(total_swaps)
