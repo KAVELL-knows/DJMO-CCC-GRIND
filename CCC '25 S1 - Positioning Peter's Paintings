@@ -1,0 +1,12 @@
+#CCC '25 S1 - Positioning Peter's Paintings
+a, b, x, y = map(int, input().split())
+
+w_side = a + x
+h_side = max(b, y)
+p_side = 2 * (w_side + h_side)
+
+w_stack = max(a, x)
+h_stack = b + y
+p_stack = 2 * (w_stack + h_stack)
+
+print(min(p_side, p_stack))
