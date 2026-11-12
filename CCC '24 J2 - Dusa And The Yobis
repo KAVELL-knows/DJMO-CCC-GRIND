@@ -1,0 +1,13 @@
+#CCC '24 J2 - Dusa And The Yobis
+
+n = int(input())
+possible = True
+
+while possible:
+    num = int(input())
+    if n > num:
+        n = n + num
+    else:
+        possible = False
+
+print(n)
