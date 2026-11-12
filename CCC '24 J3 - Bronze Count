@@ -1,0 +1,18 @@
+#CCC '24 J3 - Bronze Count
+t = int(input())
+
+scores  = []
+frequency = []
+
+for i in range(t):
+    n = int(input())
+    frequency.append(n)
+    if n not in scores:
+        scores.append(n)
+
+scores.sort(reverse=True)
+
+bronze = scores[2]
+tally = frequency.count(bronze)
+
+print(bronze, tally)
