@@ -1,0 +1,17 @@
+#CCC '25 J2 - Donut Shop
+
+d = int(input())
+t = int(input())
+
+bake = 0 
+sold = 0 
+
+for i in range(t):
+    symbol = input()
+    num = int(input())
+    if symbol == "+":
+        bake += num
+    else:
+        sold += num
+
+print(d + bake - sold)
