@@ -1,0 +1,13 @@
+#CCC '17 J2 - Shifty Sum
+n = int(input())
+s = int(input())
+
+count = 0
+sum = n
+
+while count < s:
+    count += 1
+    n = n * 10
+    sum += n 
+
+print(sum)
