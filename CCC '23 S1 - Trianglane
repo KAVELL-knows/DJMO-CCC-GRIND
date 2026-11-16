@@ -1,0 +1,23 @@
+C = int(input())
+row1 = list(map(int, input().split()))
+row2 = list(map(int, input().split()))
+
+tape = 0
+
+for i in range(C):
+    # Check top row
+    if row1[i] == 1:
+        tape += 3
+        # Shared side with left tile in top row
+        if i > 0 and row1[i - 1] == 1:
+            tape -= 2
+        # Shared side with bottom tile (only when column index is even, i.e. 1st, 3rd, 5th...)
+        if i % 2 == 0 and row2[i] == 1:
+            tape -= 2
+
+    # Check bottom row
+    if row2[i] == 1:
+        tape += 3
+        # Shared side with left tile in bottom row
+        if i > 0 and row2[i - 1] == 1:
+            tape -= 2
