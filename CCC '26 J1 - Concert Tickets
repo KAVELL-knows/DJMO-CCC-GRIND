@@ -1,0 +1,9 @@
+wants = int(input())
+stock = int(input())
+bought = int(input())
+
+left = stock - bought - wants
+if left >= 0:
+    print(f"Y {left}")
+else:
+    print("N")
