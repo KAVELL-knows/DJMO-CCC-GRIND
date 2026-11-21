@@ -1,0 +1,35 @@
+#CCC '25 J3 - Product Codes
+n = int(input())
+letters = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"}
+nums = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"}
+
+for i in range(n):
+    barcode = input()
+    answer = []
+    count = 0
+    current_num = ""  
+
+    for i in barcode:
+        if i in letters:
+            if current_num != "":     
+                count += int(current_num)
+                current_num = ""
+            answer.append(i)
+
+        elif i == '-':
+            if current_num != "":       
+                count += int(current_num)
+            current_num = "-"         
+
+        elif i in nums:
+            current_num += i             
+
+        else:                    
+            if current_num != "":      
+                count += int(current_num)
+                current_num = ""
+
+    if current_num != "":
+        count += int(current_num)
+
+    print("".join(answer) + str(count))
