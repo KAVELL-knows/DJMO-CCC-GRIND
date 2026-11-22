@@ -1,0 +1,11 @@
+#Mock CCC '14 S1 - Reverse Find
+text = input()
+pattern = input()
+
+rev_text = text[::-1]
+pos = rev_text.find(pattern)
+
+if pos == -1:
+    print(-1)
+else:
+    print(len(text) - pos)
