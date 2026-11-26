@@ -1,0 +1,7 @@
+#Mock CCC '22 Contest 2 J1 - Opening Ceremony
+a, b , c = list(map(int, input().split()))
+x, y , z = list(map(int, input().split()))
+
+first = x + y + z
+second = (a * x) + (b * y) + (c * z)
+print(first, second)
