@@ -1,0 +1,17 @@
+#CCC '18 J1 - Telemarketer or not?
+a = input()
+b = input()
+c = input()
+d = input()
+
+count = 0 
+if a == "9" or a == "8":
+    count += 1
+if d == "9" or d == "8":
+    count += 1
+if b == c:
+    count += 1
+if count == 3:
+    print("ignore")
+else:
+    print("answer")
